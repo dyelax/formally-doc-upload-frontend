@@ -1,0 +1,195 @@
+.App {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(100, 100, 100, 0.2);
+}
+
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.dropzone {
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.60);
+
+  background-color: white;
+  border-radius: 3px;
+
+  height: 600px;
+  width: 80%;
+  max-width: 500px;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+
+  /* Necessary for .dragOverlay width/height */
+  position: relative;
+}
+
+/* Title bar */
+.titleContainer {
+  padding: 5px;
+
+  color: #333;
+  font-size: 200%;
+  font-weight: 600;
+}
+
+/* Document name */
+.nameContainer {
+  padding-bottom: 30px;
+}
+.nameInput {
+  font-size: 20px;
+  outline: none;
+  border: none;
+  border-bottom: 1px darkgray solid;
+
+  text-align: center;
+  width: 70%;
+  padding-bottom: 5px;
+}
+
+/* File display */
+.fileDisplayContainer {
+  flex-grow: 1;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 0;
+  margin: 0;
+
+  background-color: #eee;
+  border-top: 1px darkgray solid;
+  border-bottom: 1px darkgray solid;
+}
+.fileList {
+  padding: 0;
+  margin: 0;
+  padding-top: 15px;
+
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+
+  align-items: center;
+}
+.fileElement {
+  display: flex;
+  flex-direction: column;
+
+  list-style: none;
+
+  float: left;
+  padding: 0 15px;
+
+  text-decoration: none;
+}
+.filePreview {
+  height: 150px;
+  width: 120px;
+  object-fit: cover;
+
+  border: solid darkgray 1px;
+  border-radius: 3px;
+  background-color: white;
+}
+.removeFileButton {
+  font-size: 12px;
+  color: red;
+  border: none;
+  background: none;
+  text-decoration: underline;
+}
+
+/* Empty file list */
+.emptyFileList {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.emptyFileListIcon {
+  height: 80px;
+  opacity: 0.5;
+}
+.emptyFileListMessage {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* Action buttons */
+.actionButtonOuterContainer{
+  margin: 15px 0;
+}
+.actionButtonContainer {
+  padding: 15px;
+}
+.actionButton {
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(84, 184, 186);
+  color: white;
+
+  font-size: 16px;
+  height: 55px;
+  width: 50%;
+}
+.actionButtonInnerContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.addDocumentButtonContainer {
+  padding-bottom: 0;
+}
+.addDocumentButton {
+  background-color: white;
+  border: 1px solid rgb(84, 184, 186);
+  color: rgb(84, 184, 186);
+}
+.plusIcon {
+  height: 20px;
+  margin-right: 10px;
+}
+.addFileText {
+  font-size: 16px;
+}
+
+/* Drag+drop overlay */
+.dragOverlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(84, 184, 186, 0.9);
+  border-radius: 3px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dragOverlayIcon {
+  width: 20%;
+}
+.dragOverlayMessage {
+  color: white;
+}
